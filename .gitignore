@@ -1,0 +1,7 @@
+nodejs/
+.agents/
+# OS files
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
