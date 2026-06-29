@@ -44,7 +44,7 @@ function loadLanguage() {
   var n = document.getElementById("navToggle");
   var m = document.getElementById("mainNav");
   if (n && m) {
-    n.addEventListener("click", function() { m.classList.toggle("open"); });
+    n.addEventListener("click", function() { m.classList.toggle("open"); });document.addEventListener("click",function(e){if(m&&m.classList.contains("open")&&!m.contains(e.target)&&!n.contains(e.target)){m.classList.remove("open")}});document.addEventListener("keydown",function(e){if(e.key==="Escape"&&m&&m.classList.contains("open")){m.classList.remove("open")}});
     document.querySelectorAll("#mainNav a").forEach(function(l) { l.addEventListener("click", function() { m.classList.remove("open"); }); });
   }
   var ls = document.getElementById("languageSelect");
